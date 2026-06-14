@@ -125,8 +125,7 @@ export default function PreviewPage() {
                   )}
                   {!r && (
                     <p className="text-xs text-gray-400">
-                      SKU: {formData.model || "—"} · ${formData.price}
-                    </p>
+Qty: {formData.quantity} · {formData.condition}                    </p>
                   )}
                 </div>
               </div>
