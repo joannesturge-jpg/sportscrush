@@ -259,7 +259,7 @@ async function pushToShipStation(
     tags: std.tags.map((name) => ({ name })),
   };
 
-  const res = await fetch("https://ssapi.shipstation.com/products", {
+  const res = await fetch("https://ssapi.shipstation.com/products/add", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
