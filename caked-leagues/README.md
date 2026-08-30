@@ -7,8 +7,11 @@ admin dashboard at admin.cakedleagues.com.
 
 1. `npm install`
 2. Copy `.env.example` to `.env` and fill in `DATABASE_URL` and `JWT_SECRET` (see below).
-3. `npx prisma migrate dev --name init` to create the database tables.
+3. `npx prisma migrate deploy` to create the database tables (the migration is already checked in — this just applies it).
 4. `npm run dev` and visit http://localhost:3000.
+
+In production, `npm run build` runs `prisma migrate deploy` automatically before building, so
+Vercel creates/updates the tables on every deploy — no manual step needed there.
 
 Sign up with the email you listed in `ADMIN_EMAILS` to get admin access. Locally,
 visit http://localhost:3000/admin directly (subdomain routing is only enforced
