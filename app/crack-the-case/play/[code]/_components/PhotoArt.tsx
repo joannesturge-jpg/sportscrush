@@ -8,6 +8,8 @@ const SKY: Record<Scene, [string, string]> = {
   "traffic-cam": ["#1a1a1a", "#2c2c2c"],
   "crime-scene": ["#232323", "#3a3226"],
   "prom-photo": ["#3a2110", "#6b3a1a"],
+  map: ["#e8dcc0", "#cbb98f"],
+  school: ["#1a1030", "#2f1c4a"],
 };
 
 function Figure({ x, fill = "#1c1024" }: { x: number; fill?: string }) {
@@ -64,8 +66,35 @@ export default function PhotoArt({ scene }: { scene: Scene }) {
           <circle cx="180" cy="130" r="5" fill="#161616" />
           <circle cx="208" cy="130" r="5" fill="#161616" />
           <text x="10" y="20" fontSize="10" fill="#e5e5e5" fontFamily="monospace">
-            CAM 04 — ELM &amp; 4TH
+            CAM 07 — MAPLE ST
           </text>
+        </>
+      )}
+
+      {scene === "map" && (
+        <>
+          <rect x="14" y="14" width="212" height="152" fill="none" stroke="#5c4a2e" strokeWidth="2" />
+          <line x1="14" y1="60" x2="226" y2="60" stroke="#8a7550" strokeWidth="1.5" />
+          <line x1="120" y1="14" x2="120" y2="166" stroke="#8a7550" strokeWidth="1.5" />
+          <path d="M 60 30 L 60 90 L 150 90 L 150 140" stroke="#c23b3b" strokeWidth="3" fill="none" strokeDasharray="1 0" />
+          <circle cx="60" cy="30" r="5" fill="#3a2f1a" />
+          <circle cx="150" cy="140" r="5" fill="#3a2f1a" />
+          <text x="24" y="28" fontSize="9" fill="#3a2f1a" fontFamily="monospace">
+            RIDGEVIEW
+          </text>
+        </>
+      )}
+
+      {scene === "school" && (
+        <>
+          <rect x="0" y="110" width="240" height="70" fill="#120a20" />
+          <rect x="30" y="40" width="180" height="80" fill="#1e1436" />
+          <rect x="100" y="20" width="40" height="20" fill="#241a42" />
+          <rect x="55" y="60" width="18" height="26" fill="#ffd23f" opacity="0.7" />
+          <rect x="90" y="60" width="18" height="26" fill="#ffd23f" opacity="0.4" />
+          <rect x="130" y="60" width="18" height="26" fill="#ffd23f" opacity="0.7" />
+          <rect x="165" y="60" width="18" height="26" fill="#ffd23f" opacity="0.4" />
+          <Figure x="120" fill="#0b0612" />
         </>
       )}
 

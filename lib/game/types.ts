@@ -18,7 +18,7 @@ export interface EvidenceItem {
   threadOwner?: string;
   /** For photographs: a scene used to render a placeholder image until a real photo is supplied. */
   photo?: {
-    scene: "driveway" | "porch" | "traffic-cam" | "crime-scene" | "prom-photo";
+    scene: "driveway" | "porch" | "traffic-cam" | "crime-scene" | "prom-photo" | "map" | "school";
     /** Once a real photo is available, its URL — shown instead of the placeholder art. */
     imageUrl?: string;
     note?: string;
