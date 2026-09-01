@@ -95,9 +95,10 @@ export const promStory: Story = {
     {
       id: "email-dresses",
       category: "correspondence",
-      title: "\"PROM SQUAD 87\" — Message Thread",
-      subtitle: "Poppy, Amy & Traci — printed from the Prodigy service, May 18th",
+      title: "\"PROM SQUAD 87\" — Group Text",
+      subtitle: "Poppy, Amy & Traci",
       date: "May 18, 1987 — 8:41pm",
+      threadOwner: "Poppy H.",
       thread: [
         { from: "Poppy H.", time: "8:41pm", text: "ok the dress is HEMMED. Mrs. Alvarez did the beading by hand I could cry" },
         { from: "Traci N.", time: "8:44pm", text: "SCREAMING mine came in today too, the shoes are a full inch too big but its fine im wearing 2 pairs of socks lol" },
@@ -110,9 +111,10 @@ export const promStory: Story = {
     {
       id: "email-jake",
       category: "correspondence",
-      title: "Message Thread — Jake",
-      subtitle: "Poppy & Jake Sorensen, printed from the Prodigy service, May 21st",
+      title: "Text Messages — Jake",
+      subtitle: "Poppy & Jake Sorensen",
       date: "May 21, 1987 — 9:12pm",
+      threadOwner: "Poppy H.",
       thread: [
         { from: "Jake S.", time: "9:12pm", text: "hey what time am i supposed to be at the whitfields tmrw" },
         { from: "Poppy H.", time: "9:15pm", text: "photos start at 6, limo comes at 6:30. dont forget the boutonniere, its in the fridge at the flower shop under your name" },
@@ -124,9 +126,10 @@ export const promStory: Story = {
     {
       id: "email-parents",
       category: "correspondence",
-      title: "Message Thread — The Parents",
-      subtitle: "Carol Halloran & Denise Whitfield, printed from the Prodigy service, May 19th",
+      title: "Text Messages — The Parents",
+      subtitle: "Carol Halloran & Denise Whitfield",
       date: "May 19, 1987 — 2:03pm",
+      threadOwner: "Carol H.",
       thread: [
         { from: "Carol H.", time: "2:03pm", text: "Denise, Richard spoke to Lou at Griggs Livery, the limo for the six of them comes to $95 for the evening, split down the middle that's $47.50 each. Does that work?" },
         { from: "Denise W.", time: "2:20pm", text: "That's fine, I'll have Frank write the check. Are we still doing drinks for the grown-ups after the photos? I can pick up potato skins from Rusty's on my way back from the beauty parlor, and I make a wonderful cosmopolitan if I do say so myself." },
@@ -137,9 +140,10 @@ export const promStory: Story = {
     {
       id: "email-whereisshe",
       category: "correspondence",
-      title: "Message Thread — \"where is she??\"",
-      subtitle: "Group thread, printed the following morning",
+      title: "Group Text — \"where is she??\"",
+      subtitle: "Amy, Traci, Jake, Marcus & Ben",
       date: "May 22, 1987 — 6:04pm to 6:52pm",
+      threadOwner: "Jake S.",
       thread: [
         { from: "Amy W.", time: "6:04pm", text: "is poppy with anyone? she's not here yet" },
         { from: "Traci N.", time: "6:11pm", text: "no i thought she left her house already?? jake are you at the whitfields" },
@@ -158,8 +162,6 @@ export const promStory: Story = {
       date: "May 22, 1987 — 6:38pm",
       photo: {
         scene: "driveway",
-        caption:
-          "Five of the six kids pose stiffly on the Whitfields' lawn, gap where Poppy should be. In the background, the Whitfield family Buick sits at an odd angle in the driveway, nose-out instead of backed in like usual — as if it had just been pulled back in a hurry. The plate is partially visible: OH • 4J-71??.",
         note: "Denise Whitfield is not in this photo. Frank says she'd 'just stepped inside.'",
       },
     },
@@ -171,8 +173,7 @@ export const promStory: Story = {
       date: "May 22, 1987 — 5:40pm",
       photo: {
         scene: "porch",
-        caption:
-          "Poppy on her own front steps in a peach chiffon gown, corsage box in hand, grinning at the camera. Carol wrote the time on the back in pen: '5:40 — five minutes before she left to walk to Amy's! So beautiful.'",
+        note: "Timestamped 5:40pm on the back, in Carol's handwriting — five minutes before Poppy left for the Whitfields'.",
       },
     },
     {
@@ -183,9 +184,7 @@ export const promStory: Story = {
       date: "May 22, 1987 — 5:49pm to 5:52pm",
       photo: {
         scene: "traffic-cam",
-        caption:
-          "Grainy black-and-white stills, one every ninety seconds. Frame 1 (5:49pm): Poppy walking north on 4th, dress unmistakable even in grainy film. Frame 2 (5:50:30pm): Poppy continues walking; a station wagon is visible half a block behind her, paused at the stop sign on Elm. Frame 3 (5:52pm): Poppy is gone from frame — nowhere on the sidewalk. The station wagon is also gone.",
-        note: "Elm & 4th is two blocks off Poppy's direct route to the Whitfields' — and directly on the road to Rusty's Pub & Grub.",
+        note: "Three sequential frames: Poppy walking, then a station wagon idling half a block behind her at the Elm stop sign, then both gone from the next frame. Elm & 4th is two blocks off Poppy's direct route to the Whitfields' — and directly on the road to Rusty's Pub & Grub.",
       },
     },
     {
@@ -196,8 +195,7 @@ export const promStory: Story = {
       date: "May 23, 1987 — 7:15am",
       photo: {
         scene: "crime-scene",
-        caption:
-          "Poppy's peach boutonniere box, crushed flat, in the gravel on the shoulder of Culvert Road. A few feet away, a single faint tire track curves off the asphalt onto the shoulder and back — the tread pattern consistent with a full-size wagon tire, not a compact car.",
+        note: "Evidence tech's read on the tread: consistent with a full-size wagon tire, not a compact car.",
       },
     },
     {
@@ -208,8 +206,6 @@ export const promStory: Story = {
       date: "May 22, 1987 — 9:10pm",
       photo: {
         scene: "prom-photo",
-        caption:
-          "A few grim frames of the remaining kids and parents in the Whitfield living room, nobody smiling, waiting on word from the search party. On the side table behind them: a full plate of potato skins, mostly untouched, and a pitcher of pink liquid with a lime wedge on the rim.",
         note: "Denise told police she 'never left the kitchen all evening' and 'didn't have time to make anything special' once Poppy went missing.",
       },
     },

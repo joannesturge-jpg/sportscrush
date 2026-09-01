@@ -53,32 +53,38 @@ function BriefingScreen({ story }: { story: Pick<Story, "title" | "setup"> }) {
 function EvidenceScreen({ item }: { item: import("@/lib/game/types").EvidenceItem }) {
   return (
     <div>
-      <ScreenHeader label={item.category === "correspondence" ? "MAIL.SYS" : item.category === "photograph" ? "PHOTO_VIEWER" : "TRANSCRIPT.DOC"} />
+      <ScreenHeader label={item.category === "correspondence" ? "MESSAGES" : item.category === "photograph" ? "PHOTO_VIEWER" : "TRANSCRIPT.DOC"} />
       <h2 className="ctc-arcade ctc-neon-cyan text-sm sm:text-base mb-1 leading-relaxed">{item.title}</h2>
       <p className="text-sm text-[var(--ctc-text-dim)] mb-1">{item.subtitle}</p>
       <p className="text-xs text-[var(--ctc-text-dim)] mb-5">{item.date}</p>
 
       {item.thread && (
-        <div className="space-y-3">
-          {item.thread.map((m, i) => (
-            <div key={i} className="ctc-thread-bubble px-4 py-3">
-              <div className="flex justify-between text-sm mb-1 text-[var(--ctc-cyan)]">
-                <span className="font-bold">{m.from}</span>
-                <span className="text-[var(--ctc-text-dim)]">{m.time}</span>
+        <div className="space-y-2.5">
+          {item.thread.map((m, i) => {
+            const sent = m.from === item.threadOwner;
+            return (
+              <div key={i} className={`flex flex-col ${sent ? "items-end" : "items-start"}`}>
+                <span className="text-xs text-[var(--ctc-text-dim)] px-2 mb-0.5">
+                  {m.from} · {m.time}
+                </span>
+                <div className={`ctc-bubble ${sent ? "ctc-bubble-sent" : "ctc-bubble-received"}`}>{m.text}</div>
               </div>
-              <p className="text-lg leading-snug">{m.text}</p>
-            </div>
-          ))}
+            );
+          })}
         </div>
       )}
 
       {item.photo && (
         <div className="flex flex-col items-center">
-          <div className={`ctc-polaroid w-full max-w-sm ${item.photo.scene === "traffic-cam" ? "" : ""}`}>
+          <div className="ctc-polaroid w-full max-w-sm">
             <div className={`ctc-photo-surface ${item.photo.scene === "traffic-cam" ? "ctc-static" : ""}`}>
-              <PhotoArt scene={item.photo.scene} />
+              {item.photo.imageUrl ? (
+                // eslint-disable-next-line @next/next/no-img-element
+                <img src={item.photo.imageUrl} alt={item.title} className="w-full h-full object-cover" />
+              ) : (
+                <PhotoArt scene={item.photo.scene} />
+              )}
             </div>
-            <p className="text-sm mt-2 px-1 leading-snug">{item.photo.caption}</p>
           </div>
           {item.photo.note && (
             <p className="text-base text-[var(--ctc-yellow)] mt-4 max-w-sm text-center leading-snug">

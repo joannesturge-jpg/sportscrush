@@ -182,11 +182,27 @@
   background: transparent;
 }
 
-/* Evidence rendering */
-.ctc-thread-bubble {
-  background: rgba(45, 226, 230, 0.08);
-  border: 1px solid rgba(45, 226, 230, 0.25);
-  border-radius: 0.6rem;
+/* Evidence rendering — text message bubbles */
+.ctc-bubble {
+  max-width: 82%;
+  padding: 0.55rem 0.9rem;
+  border-radius: 1.1rem;
+  font-size: 1.15rem;
+  line-height: 1.4;
+  word-break: break-word;
+}
+
+.ctc-bubble-sent {
+  background: linear-gradient(135deg, var(--ctc-pink), var(--ctc-orange));
+  color: #1c0c33;
+  border-bottom-right-radius: 0.3rem;
+}
+
+.ctc-bubble-received {
+  background: rgba(45, 226, 230, 0.1);
+  border: 1px solid rgba(45, 226, 230, 0.3);
+  color: var(--ctc-text);
+  border-bottom-left-radius: 0.3rem;
 }
 
 .ctc-polaroid {

@@ -1,6 +1,6 @@
 export type EvidenceCategory = "correspondence" | "photograph" | "transcript";
 
-export interface EmailMessage {
+export interface ThreadMessage {
   from: string;
   time: string;
   text: string;
@@ -12,12 +12,15 @@ export interface EvidenceItem {
   title: string;
   subtitle: string;
   date: string;
-  /** For correspondence: a message thread. */
-  thread?: EmailMessage[];
-  /** For photographs: caption + a simple scene description used to render a placeholder image. */
+  /** For correspondence: a text message thread. */
+  thread?: ThreadMessage[];
+  /** For correspondence: the sender whose messages render as "sent" (right-aligned) bubbles. */
+  threadOwner?: string;
+  /** For photographs: a scene used to render a placeholder image until a real photo is supplied. */
   photo?: {
-    caption: string;
     scene: "driveway" | "porch" | "traffic-cam" | "crime-scene" | "prom-photo";
+    /** Once a real photo is available, its URL — shown instead of the placeholder art. */
+    imageUrl?: string;
     note?: string;
   };
   /** For transcripts: interrogation Q&A. */
