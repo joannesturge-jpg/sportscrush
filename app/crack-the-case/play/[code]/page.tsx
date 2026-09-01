@@ -12,7 +12,7 @@ import { LaptopContent } from "./_components/types";
 type Tab = "evidence" | "notes" | "suspects";
 
 const CATEGORY_LABEL: Record<EvidenceCategory, string> = {
-  correspondence: "Text Messages",
+  correspondence: "Emails",
   photograph: "Photographs",
   transcript: "Interrogation Transcripts",
 };

@@ -53,7 +53,7 @@ function BriefingScreen({ story }: { story: Pick<Story, "title" | "setup"> }) {
 function EvidenceScreen({ item }: { item: import("@/lib/game/types").EvidenceItem }) {
   return (
     <div>
-      <ScreenHeader label={item.category === "correspondence" ? "MESSAGES" : item.category === "photograph" ? "PHOTO_VIEWER" : "TRANSCRIPT.DOC"} />
+      <ScreenHeader label={item.category === "correspondence" ? "MAIL.SYS" : item.category === "photograph" ? "PHOTO_VIEWER" : "TRANSCRIPT.DOC"} />
       <h2 className="ctc-arcade ctc-neon-cyan text-sm sm:text-base mb-1 leading-relaxed">{item.title}</h2>
       <p className="text-sm text-[var(--ctc-text-dim)] mb-1">{item.subtitle}</p>
       <p className="text-xs text-[var(--ctc-text-dim)] mb-5">{item.date}</p>
