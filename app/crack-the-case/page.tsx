@@ -77,7 +77,7 @@ export default function CrackTheCaseHome() {
         <p className="ctc-arcade ctc-neon-cyan text-[0.6rem] sm:text-xs tracking-[0.35em] mb-4">
           RIDGEVIEW POLICE DEPT. · MAY 1987
         </p>
-        <h1 className="ctc-arcade ctc-neon-pink text-2xl sm:text-4xl leading-tight mb-2">
+        <h1 className="ctc-arcade ctc-neon-pink ctc-cursor text-2xl sm:text-4xl leading-tight mb-2">
           CRACK
           <br />
           THE CASE

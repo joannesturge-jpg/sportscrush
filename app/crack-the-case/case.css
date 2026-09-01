@@ -260,3 +260,98 @@
   font-family: var(--font-terminal), monospace;
   font-size: 1.1rem;
 }
+
+/* Whole-site CRT monitor vibe — like the game runs on an 80s home computer */
+.ctc-crt-scanlines {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  pointer-events: none;
+  background: repeating-linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 0px,
+    rgba(0, 0, 0, 0) 2px,
+    rgba(0, 0, 0, 0.1) 3px,
+    rgba(0, 0, 0, 0) 4px
+  );
+  mix-blend-mode: overlay;
+  animation: ctc-flicker 7s infinite;
+}
+
+.ctc-crt-vignette {
+  position: fixed;
+  inset: 0;
+  z-index: 201;
+  pointer-events: none;
+  box-shadow: inset 0 0 15vmin rgba(0, 0, 0, 0.55), inset 0 0 3vmin rgba(0, 0, 0, 0.35);
+  background: radial-gradient(ellipse at center, rgba(45, 226, 230, 0.03), transparent 60%);
+}
+
+.ctc-crt-statusbar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 202;
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.25rem 0;
+  font-family: var(--font-terminal), monospace;
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  color: var(--ctc-text-dim);
+  background: linear-gradient(0deg, rgba(5, 2, 10, 0.85), transparent);
+}
+
+.ctc-crt-led {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--ctc-cyan);
+  box-shadow: 0 0 5px var(--ctc-cyan), 0 0 10px var(--ctc-cyan);
+  animation: ctc-blink 2.4s infinite;
+}
+
+.ctc-cursor::after {
+  content: "_";
+  animation: ctc-blink 1s steps(1) infinite;
+}
+
+@keyframes ctc-flicker {
+  0%,
+  95%,
+  100% {
+    opacity: 1;
+  }
+  96% {
+    opacity: 0.85;
+  }
+  97% {
+    opacity: 1;
+  }
+  98% {
+    opacity: 0.92;
+  }
+}
+
+@keyframes ctc-blink {
+  0%,
+  49% {
+    opacity: 1;
+  }
+  50%,
+  100% {
+    opacity: 0.15;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ctc-crt-scanlines,
+  .ctc-crt-led,
+  .ctc-cursor::after {
+    animation: none;
+  }
+}

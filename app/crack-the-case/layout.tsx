@@ -25,6 +25,12 @@ export default function CrackTheCaseLayout({ children }: { children: React.React
   return (
     <div className={`${pressStart.variable} ${vt323.variable} ctc-root min-h-screen`}>
       {children}
+      <div className="ctc-crt-scanlines" aria-hidden="true" />
+      <div className="ctc-crt-vignette" aria-hidden="true" />
+      <div className="ctc-crt-statusbar" aria-hidden="true">
+        <span className="ctc-crt-led" />
+        RIDGEVIEW PD TERMINAL — CASE-FILE OS v2.1
+      </div>
     </div>
   );
 }
