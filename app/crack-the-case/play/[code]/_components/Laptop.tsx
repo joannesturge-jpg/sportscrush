@@ -86,11 +86,6 @@ function EvidenceScreen({ item }: { item: import("@/lib/game/types").EvidenceIte
               )}
             </div>
           </div>
-          {item.photo.note && (
-            <p className="text-base text-[var(--ctc-yellow)] mt-4 max-w-sm text-center leading-snug">
-              ★ {item.photo.note}
-            </p>
-          )}
         </div>
       )}
 

@@ -95,7 +95,7 @@ export const promStory: Story = {
     {
       id: "email-dresses",
       category: "correspondence",
-      title: "\"PROM SQUAD 87\" — Group Text",
+      title: "\"PROM SQUAD 87\" — Group Email",
       subtitle: "Poppy, Amy & Traci",
       date: "May 1, 1987 — 8:41pm",
       threadOwner: "Poppy H.",
@@ -111,7 +111,7 @@ export const promStory: Story = {
     {
       id: "text-traci-doubts",
       category: "correspondence",
-      title: "Text Messages — Traci (private)",
+      title: "Email — Traci (private)",
       subtitle: "Poppy & Traci Nguyen",
       date: "May 15, 1987 — 9:40pm",
       threadOwner: "Poppy H.",
@@ -132,7 +132,7 @@ export const promStory: Story = {
     {
       id: "email-jake",
       category: "correspondence",
-      title: "Text Messages — Jake",
+      title: "Email — Jake",
       subtitle: "Poppy & Jake Sorensen",
       date: "May 21, 1987 — 9:12pm",
       threadOwner: "Poppy H.",
@@ -147,7 +147,7 @@ export const promStory: Story = {
     {
       id: "email-parents",
       category: "correspondence",
-      title: "Text Messages — The Parents",
+      title: "Email — The Parents",
       subtitle: "Carol Halloran & Denise Whitfield",
       date: "May 19, 1987 — 2:03pm",
       threadOwner: "Carol H.",
@@ -161,7 +161,7 @@ export const promStory: Story = {
     {
       id: "photo-driveway",
       category: "photograph",
-      title: "Driveway Photos, No Poppy",
+      title: "Pre Prom Photo #1",
       subtitle: "Taken by Richard Halloran on the Whitfields' front lawn, 6:38pm",
       date: "May 22, 1987 — 6:38pm",
       photo: {
@@ -171,9 +171,21 @@ export const promStory: Story = {
       },
     },
     {
+      id: "photo-promphotos",
+      category: "photograph",
+      title: "Pre Prom Photo #2",
+      subtitle: "Taken by Frank Whitfield's camcorder, shortly after 6pm",
+      date: "May 22, 1987 — 6:10pm",
+      photo: {
+        scene: "prom-photo",
+        imageUrl: "/crack-the-case/evidence/prom-photo.png",
+        note: "Denise told police she 'never really left the house' that afternoon — but the spread was already out and the pitcher already poured well before anyone started asking where Poppy was.",
+      },
+    },
+    {
       id: "photo-porch",
       category: "photograph",
-      title: "Poppy, Alone in Her Dress",
+      title: "Poppy's House",
       subtitle: "Taken by Carol Halloran on the Hallorans' front porch, 5:40pm",
       date: "May 22, 1987 — 5:40pm",
       photo: {
@@ -185,7 +197,7 @@ export const promStory: Story = {
     {
       id: "photo-trafficcam",
       category: "photograph",
-      title: "Cameras 12, 7 & 3 — Sequential Frames",
+      title: "Traffic Cameras",
       subtitle: "Ridgeview PD street cameras along Maple, released to investigators",
       date: "May 22, 1987 — 6:03pm to 6:06pm",
       photo: {
@@ -197,7 +209,7 @@ export const promStory: Story = {
     {
       id: "town-map",
       category: "photograph",
-      title: "Ridgeview — Town Map & Camera Locations",
+      title: "Town Map",
       subtitle: "Marked up by Ridgeview PD, showing Poppy's route and Cams 12, 7 & 3",
       date: "May 23, 1987",
       photo: {
@@ -209,7 +221,7 @@ export const promStory: Story = {
     {
       id: "photo-crimescene",
       category: "photograph",
-      title: "Maple Street — Scene Photos",
+      title: "Maple Street — Evidence Photo",
       subtitle: "Taken by Ridgeview PD the following morning",
       date: "May 23, 1987 — 7:15am",
       photo: {
@@ -221,25 +233,13 @@ export const promStory: Story = {
     {
       id: "prom-night",
       category: "photograph",
-      title: "Prom Night Goes On",
+      title: "Highschool Prom Photo",
       subtitle: "Taken outside Ridgeview High, roughly 9:30pm",
       date: "May 22, 1987 — 9:30pm",
       photo: {
         scene: "school",
         imageUrl: "/crack-the-case/evidence/school.png",
         note: "While Poppy's friends stayed behind searching, the dance went on without them. A Rams player in a letterman jacket arrives alone in the rain, hours after kickoff for the pre-photos — around the same time Jake's teammates would have been getting to the gym.",
-      },
-    },
-    {
-      id: "photo-promphotos",
-      category: "photograph",
-      title: "Waiting on the Whitfields' Kitchen",
-      subtitle: "Taken by Frank Whitfield's camcorder, shortly after 6pm",
-      date: "May 22, 1987 — 6:10pm",
-      photo: {
-        scene: "prom-photo",
-        imageUrl: "/crack-the-case/evidence/prom-photo.png",
-        note: "Denise told police she 'never really left the house' that afternoon — but the spread was already out and the pitcher already poured well before anyone started asking where Poppy was.",
       },
     },
     {
