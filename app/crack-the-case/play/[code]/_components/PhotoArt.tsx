@@ -51,9 +51,9 @@ export default function PhotoArt({ scene }: { scene: Scene }) {
           <circle cx="155" cy="130" r="8" fill="#0a0612" />
           <circle cx="205" cy="130" r="8" fill="#0a0612" />
           <rect x="196" y="105" width="18" height="7" fill="#ffd23f" opacity="0.8" />
-          <Figure x="40" fill="#3a2350" />
-          <Figure x="65" fill="#3a2350" />
-          <Figure x="90" fill="#3a2350" />
+          <Figure x={40} fill="#3a2350" />
+          <Figure x={65} fill="#3a2350" />
+          <Figure x={90} fill="#3a2350" />
         </>
       )}
 
@@ -61,7 +61,7 @@ export default function PhotoArt({ scene }: { scene: Scene }) {
         <>
           <rect x="0" y="0" width="240" height="180" fill="#161616" />
           <rect x="0" y="140" width="240" height="40" fill="#202020" />
-          <Figure x="120" fill="#e5e5e5" />
+          <Figure x={120} fill="#e5e5e5" />
           <rect x="170" y="110" width="46" height="20" rx="3" fill="#4a4a4a" />
           <circle cx="180" cy="130" r="5" fill="#161616" />
           <circle cx="208" cy="130" r="5" fill="#161616" />
@@ -94,7 +94,7 @@ export default function PhotoArt({ scene }: { scene: Scene }) {
           <rect x="90" y="60" width="18" height="26" fill="#ffd23f" opacity="0.4" />
           <rect x="130" y="60" width="18" height="26" fill="#ffd23f" opacity="0.7" />
           <rect x="165" y="60" width="18" height="26" fill="#ffd23f" opacity="0.4" />
-          <Figure x="120" fill="#0b0612" />
+          <Figure x={120} fill="#0b0612" />
         </>
       )}
 
@@ -113,9 +113,9 @@ export default function PhotoArt({ scene }: { scene: Scene }) {
           <rect x="150" y="95" width="60" height="36" fill="#5b3a1a" />
           <ellipse cx="168" cy="98" rx="16" ry="6" fill="#d9a86b" />
           <ellipse cx="196" cy="100" rx="7" ry="10" fill="#ff6fc9" opacity="0.8" />
-          <Figure x="40" fill="#e9dcc8" />
-          <Figure x="65" fill="#e9dcc8" />
-          <Figure x="90" fill="#e9dcc8" />
+          <Figure x={40} fill="#e9dcc8" />
+          <Figure x={65} fill="#e9dcc8" />
+          <Figure x={90} fill="#e9dcc8" />
           <circle cx="30" cy="20" r="14" fill="#ffd23f" opacity="0.6" />
         </>
       )}
