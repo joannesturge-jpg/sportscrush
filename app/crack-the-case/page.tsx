@@ -77,10 +77,9 @@ export default function CrackTheCaseHome() {
         <p className="ctc-arcade ctc-neon-cyan text-[0.6rem] sm:text-xs tracking-[0.35em] mb-4">
           RIDGEVIEW POLICE DEPT. · MAY 1987
         </p>
-        <h1 className="ctc-arcade ctc-neon-pink ctc-cursor text-2xl sm:text-4xl leading-tight mb-2">
-          CRACK
-          <br />
-          THE CASE
+        <h1 className="leading-tight mb-2">
+          <span className="ctc-arcade ctc-neon-pink block text-3xl sm:text-5xl">CRACK</span>
+          <span className="ctc-script ctc-neon-cyan ctc-cursor block text-3xl sm:text-5xl -mt-1">the case</span>
         </h1>
         <p className="text-lg text-[var(--ctc-text-dim)] mb-10">
           A girl vanished on her way to prom. Read the evidence. Question everyone.

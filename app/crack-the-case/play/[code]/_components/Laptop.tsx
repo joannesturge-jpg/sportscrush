@@ -3,7 +3,7 @@ import { LaptopContent } from "./types";
 import PhotoArt from "./PhotoArt";
 
 const SPEAKER_COLORS: Record<string, string> = {
-  Okafor: "#2de2e6",
+  Okafor: "#5fe0b8",
   Denise: "#ff6fc9",
   Frank: "#ff8b3d",
   Amy: "#ffd23f",

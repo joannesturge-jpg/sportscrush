@@ -1,11 +1,18 @@
 import type { Metadata } from "next";
-import { Press_Start_2P, VT323 } from "next/font/google";
+import { Anton, Dancing_Script, VT323 } from "next/font/google";
 import "./case.css";
 
-const pressStart = Press_Start_2P({
+const anton = Anton({
   subsets: ["latin"],
   weight: "400",
   variable: "--font-arcade",
+  display: "swap",
+});
+
+const dancingScript = Dancing_Script({
+  subsets: ["latin"],
+  weight: ["600", "700"],
+  variable: "--font-script",
   display: "swap",
 });
 
@@ -23,7 +30,7 @@ export const metadata: Metadata = {
 
 export default function CrackTheCaseLayout({ children }: { children: React.ReactNode }) {
   return (
-    <div className={`${pressStart.variable} ${vt323.variable} ctc-root min-h-screen`}>
+    <div className={`${anton.variable} ${dancingScript.variable} ${vt323.variable} ctc-root min-h-screen`}>
       {children}
       <div className="ctc-crt-scanlines" aria-hidden="true" />
       <div className="ctc-crt-vignette" aria-hidden="true" />
