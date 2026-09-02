@@ -5,7 +5,7 @@ export const promStory: Story = {
   title: "The Ridgeview Prom Night",
   year: "1987",
   setup:
-    "Ridgeview High, May 22nd, 1987. Poppy Halloran left her house at 5:45pm to walk the six blocks down Maple Street to the Whitfield house for pre-prom photos. Her date, her friends, and both sets of parents were waiting on the Whitfields' front lawn with three cameras and a limo booked for 6:30. She never arrived. Twelve hours later a jogger found her prom corsage crushed on the shoulder of Maple Street, steps from her direct route. Read the evidence. Question the timeline. Crack the case.",
+    "Ridgeview High, May 22nd, 1987. Poppy Halloran left her house at 5:45pm to walk the six blocks down Maple Street to the Whitfield house for pre-prom photos. Her date, her friends, and both sets of parents were waiting on the Whitfields' front lawn with three cameras and a limo booked for 6:30. She never arrived. Twelve hours later a jogger found a box of boutonnieres crushed on the shoulder of Maple Street, steps from her direct route. Read the evidence. Question the timeline. Crack the case.",
   characters: [
     {
       id: "poppy",
@@ -203,6 +203,7 @@ export const promStory: Story = {
         scene: "driveway",
         imageUrl: "/crack-the-case/evidence/driveway.png",
         note: "Denise Whitfield is not in this photo. Her Buick sits in the background — plate OH 4J-71 visible over the hood.",
+        subjects: "Marcus, Amy, Amy's date, Traci, Jake",
       },
     },
     {
@@ -215,6 +216,7 @@ export const promStory: Story = {
         scene: "prom-photo",
         imageUrl: "/crack-the-case/evidence/prom-photo.png",
         note: "Denise told police she 'never really left the house' that afternoon — but the spread was already out and the pitcher already poured well before anyone started asking where Poppy was.",
+        subjects: "Marcus, Amy, Amy's date, Traci, Jake",
       },
     },
     {
@@ -234,7 +236,7 @@ export const promStory: Story = {
       category: "photograph",
       title: "Traffic Cameras",
       subtitle: "Ridgeview PD street cameras along Maple, released to investigators",
-      date: "May 22, 1987 — 6:03pm to 6:06pm",
+      date: "May 22, 1987 — 5:50pm to 5:55pm",
       photo: {
         scene: "traffic-cam",
         imageUrl: "/crack-the-case/evidence/traffic-cam.png",

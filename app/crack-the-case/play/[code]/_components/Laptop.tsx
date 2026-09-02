@@ -2,6 +2,20 @@ import { Story } from "@/lib/game/types";
 import { LaptopContent } from "./types";
 import PhotoArt from "./PhotoArt";
 
+const SPEAKER_COLORS: Record<string, string> = {
+  Okafor: "#2de2e6",
+  Denise: "#ff6fc9",
+  Frank: "#ff8b3d",
+  Amy: "#ffd23f",
+  Jake: "#8cb4ff",
+  Traci: "#6effc0",
+  Marcus: "#ff7a7a",
+  Carol: "#c99bff",
+  Richard: "#e0b45a",
+  Kowalski: "#ff5c8a",
+};
+const DEFAULT_SPEAKER_COLOR = "#ff6fc9";
+
 export default function Laptop({
   content,
   story,
@@ -86,6 +100,9 @@ function EvidenceScreen({ item }: { item: import("@/lib/game/types").EvidenceIte
               )}
             </div>
           </div>
+          {item.photo.subjects && (
+            <p className="text-sm text-[var(--ctc-text-dim)] mt-3">In this photo: {item.photo.subjects}</p>
+          )}
         </div>
       )}
 
@@ -98,7 +115,9 @@ function EvidenceScreen({ item }: { item: import("@/lib/game/types").EvidenceIte
           <div className="space-y-2">
             {item.transcript.lines.map((l, i) => (
               <p key={i} className="text-lg leading-snug">
-                <span className="font-bold text-[var(--ctc-pink-soft)]">{l.speaker}: </span>
+                <span className="font-bold" style={{ color: SPEAKER_COLORS[l.speaker] ?? DEFAULT_SPEAKER_COLOR }}>
+                  {l.speaker}:{" "}
+                </span>
                 {l.text}
               </p>
             ))}

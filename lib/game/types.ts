@@ -22,6 +22,8 @@ export interface EvidenceItem {
     /** Once a real photo is available, its URL — shown instead of the placeholder art. */
     imageUrl?: string;
     note?: string;
+    /** Short "who's in this photo" line shown under the image. */
+    subjects?: string;
   };
   /** For transcripts: interrogation Q&A. */
   transcript?: {
