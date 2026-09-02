@@ -28,6 +28,7 @@ export default function PlayScreen() {
   const [story, setStory] = useState<PublicStory | null>(null);
   const [room, setRoom] = useState<PublicRoom | null>(null);
   const [tab, setTab] = useState<Tab>("evidence");
+  const [navExpanded, setNavExpanded] = useState(true);
   const [selectedEvidenceId, setSelectedEvidenceId] = useState<string | null>(null);
   const [selectedCharacterId, setSelectedCharacterId] = useState<string | null>(null);
   const [laptopMode, setLaptopMode] = useState<"briefing" | "evidence" | "character" | "solved">("briefing");
@@ -157,11 +158,22 @@ export default function PlayScreen() {
   function selectEvidence(item: EvidenceItem) {
     setSelectedEvidenceId(item.id);
     setLaptopMode("evidence");
+    setNavExpanded(false);
   }
 
   function selectCharacter(id: string) {
     setSelectedCharacterId(id);
     setLaptopMode("character");
+    setNavExpanded(false);
+  }
+
+  function selectTab(t: Tab) {
+    if (tab === t) {
+      setNavExpanded((v) => !v);
+    } else {
+      setTab(t);
+      setNavExpanded(true);
+    }
   }
 
   return (
@@ -191,18 +203,31 @@ export default function PlayScreen() {
             {(["evidence", "notes", "suspects"] as Tab[]).map((t) => (
               <button
                 key={t}
-                onClick={() => setTab(t)}
-                className={`ctc-tab flex-1 ${tab === t ? "ctc-tab-active" : ""}`}
+                onClick={() => selectTab(t)}
+                className={`ctc-tab flex-1 flex items-center justify-center gap-1 ${tab === t ? "ctc-tab-active" : ""}`}
               >
                 {t === "evidence" ? "Evidence" : t === "notes" ? "Notepad" : "Suspects"}
+                <span
+                  className={`lg:hidden inline-block text-xs transition-transform ${
+                    tab === t && navExpanded ? "rotate-180" : ""
+                  }`}
+                  aria-hidden="true"
+                >
+                  ▾
+                </span>
               </button>
             ))}
           </div>
 
           {tab === "evidence" && (
-            <div className="space-y-5 max-h-[65vh] overflow-y-auto ctc-scrollbar pr-1">
+            <div
+              className={`${navExpanded ? "block" : "hidden"} lg:block space-y-5 max-h-[65vh] overflow-y-auto ctc-scrollbar pr-1`}
+            >
               <button
-                onClick={() => setLaptopMode("briefing")}
+                onClick={() => {
+                  setLaptopMode("briefing");
+                  setNavExpanded(false);
+                }}
                 className={`ctc-tab w-full ${laptopMode === "briefing" ? "ctc-tab-active" : ""}`}
               >
                 📁 The Case
@@ -235,7 +260,7 @@ export default function PlayScreen() {
           )}
 
           {tab === "notes" && (
-            <div>
+            <div className={`${navExpanded ? "block" : "hidden"} lg:block`}>
               <p className="text-xs text-[var(--ctc-text-dim)] mb-2">
                 Shared with the whole room — everyone can read and edit.
                 {notesSaving && <span className="text-[var(--ctc-cyan)]"> Saving…</span>}
@@ -255,7 +280,9 @@ export default function PlayScreen() {
           )}
 
           {tab === "suspects" && (
-            <div className="max-h-[65vh] overflow-y-auto ctc-scrollbar pr-1 space-y-5">
+            <div
+              className={`${navExpanded ? "block" : "hidden"} lg:block max-h-[65vh] overflow-y-auto ctc-scrollbar pr-1 space-y-5`}
+            >
               <div>
                 <p className="text-xs uppercase tracking-widest text-[var(--ctc-text-dim)] mb-2">Suspects</p>
                 <div className="space-y-1">
