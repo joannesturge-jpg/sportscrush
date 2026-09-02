@@ -180,7 +180,7 @@ export default function PlayScreen() {
     <div className="min-h-screen pb-16">
       <header className="border-b border-[var(--ctc-line)] px-4 sm:px-6 py-3 flex flex-wrap items-center gap-3 justify-between sticky top-0 bg-[var(--ctc-bg-deep)]/95 backdrop-blur z-20">
         <div>
-          <p className="ctc-arcade ctc-neon-pink text-[0.55rem] sm:text-xs tracking-[0.2em]">CRACK THE CASE</p>
+          <p className="ctc-arcade ctc-neon-pink text-[0.55rem] sm:text-xs tracking-[0.06em]">CRACK THE CASE</p>
           <p className="text-sm text-[var(--ctc-text-dim)]">
             Room <span className="text-[var(--ctc-cyan)]">{code}</span> · {room.players.length} investigator
             {room.players.length === 1 ? "" : "s"}

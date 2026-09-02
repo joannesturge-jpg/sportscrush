@@ -128,11 +128,11 @@ export default function RoomLobby() {
     <div className="ctc-grid-floor min-h-screen flex items-center justify-center px-4 py-16">
       <div className="relative z-10 w-full max-w-lg">
         <div className="text-center mb-6">
-          <p className="ctc-arcade ctc-neon-cyan text-[0.55rem] sm:text-xs tracking-[0.3em] mb-3">
+          <p className="ctc-arcade ctc-neon-cyan text-[0.55rem] sm:text-xs tracking-[0.08em] mb-3">
             CASE FILE ROOM
           </p>
           <div className="ctc-panel inline-block px-6 py-3">
-            <span className="ctc-arcade ctc-neon-pink text-xl sm:text-2xl tracking-[0.3em]">{code}</span>
+            <span className="ctc-arcade ctc-neon-pink text-xl sm:text-2xl tracking-[0.12em]">{code}</span>
           </div>
           <p className="text-sm text-[var(--ctc-text-dim)] mt-3">Share this code so others can join.</p>
           <button className="ctc-btn mt-3 text-sm" onClick={copyLink}>

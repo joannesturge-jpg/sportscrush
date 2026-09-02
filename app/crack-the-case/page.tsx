@@ -74,7 +74,7 @@ export default function CrackTheCaseHome() {
   return (
     <div className="ctc-grid-floor min-h-screen flex flex-col items-center justify-center px-4 py-16">
       <div className="relative z-10 w-full max-w-md text-center">
-        <p className="ctc-arcade ctc-neon-cyan text-[0.6rem] sm:text-xs tracking-[0.35em] mb-4">
+        <p className="ctc-arcade ctc-neon-cyan text-[0.6rem] sm:text-xs tracking-[0.1em] mb-4">
           RIDGEVIEW POLICE DEPT. · MAY 1987
         </p>
         <h1 className="leading-tight mb-2">

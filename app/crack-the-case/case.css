@@ -27,12 +27,12 @@
 
 .ctc-arcade {
   font-family: var(--font-arcade), sans-serif;
-  letter-spacing: 0.03em;
+  letter-spacing: normal;
 }
 
 .ctc-script {
   font-family: var(--font-script), cursive;
-  font-weight: 700;
+  font-weight: 400;
 }
 
 .ctc-grid-floor {
@@ -56,12 +56,10 @@
 
 .ctc-neon-pink {
   color: var(--ctc-pink-soft);
-  text-shadow: 0 0 6px rgba(255, 61, 148, 0.9), 0 0 22px rgba(255, 61, 148, 0.55), 0 0 46px rgba(255, 61, 148, 0.35);
 }
 
 .ctc-neon-cyan {
   color: var(--ctc-cyan);
-  text-shadow: 0 0 6px rgba(95, 224, 184, 0.9), 0 0 22px rgba(95, 224, 184, 0.5);
 }
 
 .ctc-panel {

@@ -1,17 +1,17 @@
 import type { Metadata } from "next";
-import { Anton, Dancing_Script, VT323 } from "next/font/google";
+import { Bungee, Grand_Hotel, VT323 } from "next/font/google";
 import "./case.css";
 
-const anton = Anton({
+const bungee = Bungee({
   subsets: ["latin"],
   weight: "400",
   variable: "--font-arcade",
   display: "swap",
 });
 
-const dancingScript = Dancing_Script({
+const grandHotel = Grand_Hotel({
   subsets: ["latin"],
-  weight: ["600", "700"],
+  weight: "400",
   variable: "--font-script",
   display: "swap",
 });
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
 
 export default function CrackTheCaseLayout({ children }: { children: React.ReactNode }) {
   return (
-    <div className={`${anton.variable} ${dancingScript.variable} ${vt323.variable} ctc-root min-h-screen`}>
+    <div className={`${bungee.variable} ${grandHotel.variable} ${vt323.variable} ctc-root min-h-screen`}>
       {children}
       <div className="ctc-crt-scanlines" aria-hidden="true" />
       <div className="ctc-crt-vignette" aria-hidden="true" />
